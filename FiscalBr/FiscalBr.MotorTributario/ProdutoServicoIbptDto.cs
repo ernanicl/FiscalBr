@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FiscalBr.MotorTributario
+﻿namespace FiscalBr.MotorTributario
 {
     /// <summary>
     /// Produto/Serviço conforme dados no DTO fornecido pela API do IBPT
