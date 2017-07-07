@@ -84,7 +84,7 @@ namespace FiscalBr.MotorTributario
             switch (tipoConsulta)
             {
                 case TipoConsulta.Produto:
-                    requestUrl = string.Format($"{UriApiDeOlhoNoImposto}/{"Produtos"}?token={token}&cnpj={cnpj}&codigo={codigo}&uf={uf}&ex=0");
+                    requestUrl = string.Format($"{UriApiDeOlhoNoImposto}/{"Produtos"}?token={token}&cnpj={cnpj}&codigo={codigo}&uf={uf}&ex={ex}");
                     break;
                 case TipoConsulta.Servico:
                     requestUrl = string.Format($"{UriApiDeOlhoNoImposto}/{"Servicos"}?token={token}&cnpj={cnpj}&codigo={codigo}&uf={uf}");
