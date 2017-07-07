@@ -91,6 +91,7 @@
             this.txtToken.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtToken.Location = new System.Drawing.Point(387, 26);
+            this.txtToken.MaxLength = 64;
             this.txtToken.Multiline = true;
             this.txtToken.Name = "txtToken";
             this.txtToken.Size = new System.Drawing.Size(585, 20);
@@ -122,6 +123,7 @@
             // 
             this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCnpj.Location = new System.Drawing.Point(22, 45);
+            this.txtCnpj.MaxLength = 14;
             this.txtCnpj.Multiline = true;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(267, 40);

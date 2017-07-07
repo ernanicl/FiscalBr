@@ -44,7 +44,6 @@ namespace FiscalBr.Classes
                 {
                     var lista = new List<Cfop>();
                     lista.Add(Cfop1101);
-                    lista.Add(Cfop1102);
 
                     return lista;
                 }
@@ -79,36 +78,6 @@ namespace FiscalBr.Classes
                 Grupo = _grupo3000,
                 SubGrupo = _subGrupo3100,
                 InicioVigenciaSped = Cfop1101.InicioVigenciaSped
-            };
-
-            public static Cfop Cfop1102 = new Cfop
-            {
-                Codigo = "1102",
-                Descricao = "Compra para comercialização",
-                Observacao = "",
-                Grupo = _grupo1000,
-                SubGrupo = _subGrupo1100,
-                InicioVigenciaSped = new DateTime(2009, 1, 1)
-            };
-
-            public static Cfop Cfop2102 = new Cfop
-            {
-                Codigo = "2102",
-                Descricao = Cfop1102.Descricao,
-                Observacao = Cfop1102.Observacao,
-                Grupo = _grupo2000,
-                SubGrupo = _subGrupo2100,
-                InicioVigenciaSped = Cfop1102.InicioVigenciaSped
-            };
-
-            public static Cfop Cfop3102 = new Cfop
-            {
-                Codigo = "3102",
-                Descricao = Cfop1102.Descricao,
-                Observacao = Cfop1102.Observacao,
-                Grupo = _grupo3000,
-                SubGrupo = _subGrupo3100,
-                InicioVigenciaSped = Cfop1102.InicioVigenciaSped
             };
 
         }
