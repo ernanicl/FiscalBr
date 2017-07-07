@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Net;
 using System.Runtime.Serialization.Json;
 
@@ -61,6 +63,14 @@ namespace FiscalBr.MotorTributario
             return valores;
         }
 
+        public static string ObterJsonResposta(string token, string cnpj, string codigo, string uf, int ex = 0,
+            TipoConsulta tipoConsulta = TipoConsulta.Produto)
+        {
+            var request = CriarRequestConsulta(token, cnpj, codigo, uf, ex, tipoConsulta);
+
+            return RespostaRequestEmJson(request);
+        }
+
         public static object ConsultarProdutoServicoIbpt(string token, string cnpj, string codigo, string uf, int ex = 0,
             TipoConsulta tipoConsulta = TipoConsulta.Produto)
         {
@@ -115,6 +125,24 @@ namespace FiscalBr.MotorTributario
                     var objResponse = jsonSerializer.ReadObject(response.GetResponseStream());
                     return objResponse;
                 }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private static string RespostaRequestEmJson(WebRequest request)
+        {
+            try
+            {
+                var objReturned = RespostaRequestConsulta(request) as ProdutoServicoIbptDto;
+
+                string json = JsonConvert.SerializeObject(objReturned);
+
+                string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented);
+
+                return jsonFormatted;
             }
             catch (Exception ex)
             {
