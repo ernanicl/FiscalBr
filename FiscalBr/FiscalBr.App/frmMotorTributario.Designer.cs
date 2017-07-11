@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBackTo = new System.Windows.Forms.Button();
             this.txtToken = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lnkBackTo = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,26 +65,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(48, 9);
+            this.label1.Location = new System.Drawing.Point(126, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Motor Tributário | IBPT";
-            // 
-            // btnBackTo
-            // 
-            this.btnBackTo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBackTo.FlatAppearance.BorderSize = 0;
-            this.btnBackTo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnBackTo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnBackTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackTo.Image = global::FiscalBr.App.Properties.Resources.Back_Arrow_32px;
-            this.btnBackTo.Location = new System.Drawing.Point(0, 0);
-            this.btnBackTo.Name = "btnBackTo";
-            this.btnBackTo.Size = new System.Drawing.Size(42, 52);
-            this.btnBackTo.TabIndex = 2;
-            this.btnBackTo.UseVisualStyleBackColor = true;
-            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // txtToken
             // 
@@ -282,9 +267,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lnkBackTo);
             this.panel1.Controls.Add(this.txtToken);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btnBackTo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -325,6 +310,20 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dados Básicos";
             // 
+            // lnkBackTo
+            // 
+            this.lnkBackTo.AutoSize = true;
+            this.lnkBackTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkBackTo.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkBackTo.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.lnkBackTo.Location = new System.Drawing.Point(12, 10);
+            this.lnkBackTo.Name = "lnkBackTo";
+            this.lnkBackTo.Size = new System.Drawing.Size(108, 31);
+            this.lnkBackTo.TabIndex = 4;
+            this.lnkBackTo.TabStop = true;
+            this.lnkBackTo.Text = "< Voltar";
+            this.lnkBackTo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkBackTo_LinkClicked);
+            // 
             // frmMotorTributario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +356,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBackTo;
         private System.Windows.Forms.TextBox txtToken;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -379,5 +377,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.LinkLabel lnkBackTo;
     }
 }

@@ -22,5 +22,10 @@ namespace FiscalBr.App
         {
             MdiHelper.MdiContainer.NovaInstanciaChildren(typeof(frmMotorTributario));
         }
+
+        private void btnSintegraBr_Click(object sender, EventArgs e)
+        {
+            MdiHelper.MdiContainer.NovaInstanciaChildren(typeof(frmSintegra));
+        }
     }
 }

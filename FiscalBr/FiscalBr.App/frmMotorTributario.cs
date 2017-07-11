@@ -17,13 +17,6 @@ namespace FiscalBr.App
         public frmMotorTributario()
         {
             InitializeComponent();
-
-
-        }
-
-        private void btnBackTo_Click(object sender, EventArgs e)
-        {
-            MdiHelper.MdiContainer.NovaInstanciaChildren(typeof (frmHome));
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -63,6 +56,11 @@ namespace FiscalBr.App
                 txtCodigo.Text, txtUf.Text, 0, tipoConsulta);
 
             txtResult.Text = resultado.ToString();
+        }
+
+        private void lnkBackTo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MdiHelper.MdiContainer.NovaInstanciaChildren(typeof(frmHome));
         }
     }
 }

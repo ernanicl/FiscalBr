@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSintegraBr = new System.Windows.Forms.Button();
             this.btnMotorTributarioIbpt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,6 +43,24 @@
             this.label1.Size = new System.Drawing.Size(127, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ferramentas";
+            // 
+            // btnSintegraBr
+            // 
+            this.btnSintegraBr.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSintegraBr.FlatAppearance.BorderSize = 0;
+            this.btnSintegraBr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSintegraBr.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSintegraBr.ForeColor = System.Drawing.Color.White;
+            this.btnSintegraBr.Image = global::FiscalBr.App.Properties.Resources.Defrag_64px;
+            this.btnSintegraBr.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSintegraBr.Location = new System.Drawing.Point(173, 87);
+            this.btnSintegraBr.Name = "btnSintegraBr";
+            this.btnSintegraBr.Size = new System.Drawing.Size(105, 105);
+            this.btnSintegraBr.TabIndex = 0;
+            this.btnSintegraBr.Text = "SintegraBr";
+            this.btnSintegraBr.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSintegraBr.UseVisualStyleBackColor = false;
+            this.btnSintegraBr.Click += new System.EventHandler(this.btnSintegraBr_Click);
             // 
             // btnMotorTributarioIbpt
             // 
@@ -69,6 +88,7 @@
             this.ClientSize = new System.Drawing.Size(923, 590);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSintegraBr);
             this.Controls.Add(this.btnMotorTributarioIbpt);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -84,5 +104,6 @@
 
         private System.Windows.Forms.Button btnMotorTributarioIbpt;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSintegraBr;
     }
 }
